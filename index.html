@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Builder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Form Section -->
+    <div class="editor">
+      <h2>Portfolio Builder</h2>
+      <form id="portfolioForm">
+        <label>Full Name</label>
+        <input type="text" id="nameInput" value="Alex Morgan">
+        
+        <label>Job Title</label>
+        <input type="text" id="titleInput" value="Frontend Developer">
+        
+        <label>Bio</label>
+        <textarea id="bioInput" rows="3">Passionate web developer building clean, responsive applications.</textarea>
+        
+        <label>Skills (comma separated)</label>
+        <input type="text" id="skillsInput" value="HTML, CSS, JavaScript, React, Git">
+        
+        <label>Project Title</label>
+        <input type="text" id="projTitleInput" value="E-Commerce Dashboard">
+        
+        <label>Project Description</label>
+        <textarea id="projDescInput" rows="2">A responsive dashboard with chart visualisations and modern UI.</textarea>
+        
+        <button type="button" onclick="window.print()">Print / Export PDF</button>
+      </form>
+    </div>
+
+    <!-- Live Preview Section -->
+    <div class="preview-wrap">
+      <div class="preview" id="previewArea">
+        <h1 id="pvName">Alex Morgan</h1>
+        <p class="subtitle" id="pvTitle">Frontend Developer</p>
+        <hr>
+        <h3>About Me</h3>
+        <p id="pvBio">Passionate web developer building clean, responsive applications.</p>
+        <h3>Skills</h3>
+        <div id="pvSkills" class="skills-list"></div>
+        <h3>Featured Project</h3>
+        <div class="project-card">
+          <h4 id="pvProjTitle">E-Commerce Dashboard</h4>
+          <p id="pvProjDesc">A responsive dashboard with chart visualisations and modern UI.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
